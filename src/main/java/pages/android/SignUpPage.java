@@ -9,12 +9,20 @@ public class SignUpPage {
 
     private String getstarted = "com.flickr.android:id/activity_welcome_sign_button";
     private String clickSignUp = "//android.view.View[@content-desc=\"Sign up here.\"]/android.widget.TextView";
-    private String first_name = "/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.webkit.WebView/android.webkit.WebView/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View[1]/android.view.View[1]/android.view.View/android.widget.EditText";
+   private String first_name = "/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.webkit.WebView/android.webkit.WebView/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View[1]/android.view.View[1]/android.view.View/android.widget.EditText";
     private String last_name = "/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.webkit.WebView/android.webkit.WebView/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View[1]/android.view.View[2]/android.view.View/android.widget.EditText";
     private String age = "/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.webkit.WebView/android.webkit.WebView/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View[1]/android.view.View[3]/android.view.View/android.widget.EditText";
     private String email_add = "/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.webkit.WebView/android.webkit.WebView/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View[1]/android.view.View[4]/android.view.View/android.widget.EditText";
     private String password = "/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.webkit.WebView/android.webkit.WebView/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View[1]/android.view.View[5]/android.view.View/android.widget.EditText";
-    private String clickSignupBtn = "/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.webkit.WebView/android.webkit.WebView/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View[1]/android.widget.Button";
+
+   private String clickSignupBtn = "/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.webkit.WebView/android.webkit.WebView/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View[1]/android.widget.Button";
+
+   /* private String first_name = "sign-up-first-name";
+    private String last_name = "sign-up-last-name";
+    private String age = "sign-up-age";
+    private String email_add = "sign-up-email";
+    private String password = "sign-up-password";*/
+    private String recaptcha = "recaptcha-anchor";
 
     public SignUpPage(Page page){
 
@@ -27,6 +35,7 @@ public class SignUpPage {
     public WebElement getAge() {return AndroidDriverSetup.getAndroidDriver().findElement(By.xpath(age));}
     public WebElement getEmailAdd() {return AndroidDriverSetup.getAndroidDriver().findElement(By.xpath(email_add));}
     public WebElement getpass() {return AndroidDriverSetup.getAndroidDriver().findElement(By.xpath(password));}
+    public WebElement getCaptcha() {return AndroidDriverSetup.getAndroidDriver().findElement(By.id(recaptcha));}
     public WebElement getclickSignUpBtn() {return AndroidDriverSetup.getAndroidDriver().findElement(By.xpath(password));}
 
 

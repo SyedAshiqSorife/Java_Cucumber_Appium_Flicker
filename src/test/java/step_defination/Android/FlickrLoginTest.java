@@ -7,8 +7,9 @@ import pages.Page;
 public class FlickrLoginTest extends Page {
 
     @Given("user click on get started")
-    public void getStarted(){
+    public void getStarted() throws InterruptedException {
         getFlickrLoginPage().getStarted().click();
+        Thread.sleep(2000);
         getFlickrLoginPage().gotoLogPage().sendKeys("marazislam8@gmail.com");
     }
 

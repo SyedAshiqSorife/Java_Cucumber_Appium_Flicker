@@ -16,7 +16,7 @@ import java.text.SimpleDateFormat;
 import java.util.Calendar;
 
 @RunWith(Cucumber.class)
-@CucumberOptions(features = {"src/test/resources/Features/bykea/android/BykeaCashReceive.feature"},
+@CucumberOptions(features = {"src/test/resources/Features/TestCases/android/"},
         plugin = {"com.aventstack.extentreports.cucumber.adapter.ExtentCucumberAdapter:", "json:Reports/cucumber-report/Cucumber.json"},
         monochrome = true,
         tags = {"@android"})

@@ -9,4 +9,4 @@ Feature: Sign Up
 
     Examples:
     |FirstName | LastName | Age | EmailAdd | Pass |
-    |Maraz     | Islam    | 20  |marazislam8@gmail.com | TestCase0101|
+    |Syed     | Ashiq    | 20  |islam10@gmail.com | TestCase0101|

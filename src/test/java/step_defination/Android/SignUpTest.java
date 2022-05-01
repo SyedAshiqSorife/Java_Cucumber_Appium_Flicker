@@ -13,20 +13,30 @@ public class SignUpTest extends Page {
 
     @Then("click on sign up here")
     public void clickSignUp(){
+        try {
+            Thread.sleep(4000);
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
         getSignUpPage().clickSignup().click();
     }
 
     @Then("user enter {string}, {string}, {string}, {string}, {string}")
     public void userEnter(String firstname, String lastname, String age, String emailadd, String pass) {
+        getSignUpPage().getFirstName().click();
         getSignUpPage().getFirstName().sendKeys(firstname);
+        getSignUpPage().getLastName().click();
         getSignUpPage().getLastName().sendKeys(lastname);
+        getSignUpPage().getAge().click();
         getSignUpPage().getAge().sendKeys(age);
         getSignUpPage().getEmailAdd().sendKeys(emailadd);
         getSignUpPage().getpass().sendKeys(pass);
     }
 
     @Then("click sign up")
-    public void clickSignUpBtn() {
+    public void clickSignUpBtn() throws InterruptedException {
+        getSignUpPage().getCaptcha().click();
+        Thread.sleep(2000);
         getSignUpPage().getclickSignUpBtn().click();
     }
 }
